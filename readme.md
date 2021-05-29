@@ -6,7 +6,7 @@
 
 Este proyecto ha consistido en la creación de un DUC y un DDC usando la arquitectura &quot;Efficient IQ&quot;. La estructura del DDC se muestra en la próxima imagen, siendo la misma que en el DUC pero cambiando el orden de sus componentes.
 
-![](RackMultipart20210529-4-18qjmkn_html_a98b81727dd0a389.png)
+![](img/img1.png)
 
 ## SETUP DEL DUC Y DDC
 
@@ -18,19 +18,19 @@ Hay 3 aplicaciones para ver el funcionamiento de los módulos:
 
 **1.- DUC:** En esta APP se genera un tono a 5 KHz que pasa por el DUC que hemos diseñado y se puede ver a la salida el tono a 17 KHz.
 
-![](RackMultipart20210529-4-18qjmkn_html_8763a18c5e437b51.png)
+![](img/img2.png)
 
 **2.- DDC:** En esta APP se genera un tono a 5 KHz y se usa un DUC normal para trasladarlo a 17KHz. Luego se usa el DDC diseñado para trasladarlo de nuevo a banda base.
 
-![](RackMultipart20210529-4-18qjmkn_html_7811d2e5463ba6d6.png)
+![](img/img3.png)
 
 **3.- DUC\_Y\_DDC:** Esta APP usa los 2 módulos que se han diseñado al mismo tiempo. En este caso, se ha configurado el DUC para hacer una interpolación por 2 y el DDC se ha configurado para delmar por 2, obteniendo los siguientes resultados:
 
-![](RackMultipart20210529-4-18qjmkn_html_8a9759739987b6d7.png)
+![](img/img4.png)
 
 \* Salida del DUC con interpolación por 2
 
-![](RackMultipart20210529-4-18qjmkn_html_50906ebba3e3de02.png)
+![](img/img5.png)
 
 \* Salida del DUC con delmación por 2
 
@@ -76,41 +76,41 @@ Tenemos que asegurarnos de que su respuesta en frecuencia sea estable en el anch
 
 Como se ve en las imágenes siguientes, su respuesta en frecuencia y retardo de grupo es lineal en el ancho de banda que se usa.
 
-![](RackMultipart20210529-4-18qjmkn_html_e0dce87fa2e910f.png)
+![](img/img6.png)
 
 \* Respuesta frecuencial
 
-![](RackMultipart20210529-4-18qjmkn_html_501a126da1f174cc.png)
+![](img/img7.png)
 
 \* Retardo de grupo
 
 ## FILTROS POLIFASE: INICIO EN EL COEF 1
 
-![](RackMultipart20210529-4-18qjmkn_html_2d08263b4a78a7e1.png)
+![](img/img8.png)
 
 \* Respuesta frecuencial
 
-![](RackMultipart20210529-4-18qjmkn_html_6db6171ad726535c.png)
+![](img/img9.png)
 
 \* Retardo de grupo
 
 ## FILTROS POLIFASE: INICIO EN EL COEF 2
 
-![](RackMultipart20210529-4-18qjmkn_html_3bd5a0c00fc2e811.png)
+![](img/img10.png)
 
 \* Respuesta frecuencial
 
-![](RackMultipart20210529-4-18qjmkn_html_abb6ab2beac7ee31.png)
+![](img/img11.png)
 
 \* Retardo de grupo
 
 ## FILTROS POLIFASE: INICIO EN EL COEF 3
 
-![](RackMultipart20210529-4-18qjmkn_html_8bf427bac8c08fd0.png)
+![](img/img12.png)
 
 \* Respuesta frecuencial
 
-![](RackMultipart20210529-4-18qjmkn_html_98bf06f8f9b5a974.png)
+![](img/img13.png)
 
 \* Retardo de grupo
 
@@ -120,11 +120,11 @@ A la hora de escoger dos bancos de filtros, se tiene que tener en cuenta que tie
 
 El primer filtro que hemos escogido, siendo su primer coeficiente el índice 0 del original (que tenía 128 coeficientes) tiene un delay de:
 
-![](RackMultipart20210529-4-18qjmkn_html_a148be0b4ccf667c.png)
+![](img/img14.png)
 
 El segundo filtro escogido, siendo su primer coeficiente el índice 2 del original (que tenía 128 coeficientes) tiene un delay de:
 
-![](RackMultipart20210529-4-18qjmkn_html_8b9da3eec69095c7.png)
+![](img/img15.png)
 
 De esta forma, conseguimos una diferencia de delay de 1 Ts, que es justo lo que necesitábamos para arreglar el delay causado por el switch.
 
@@ -134,7 +134,7 @@ Puede ser interesante ver que pasaría si los filtros utilizados no corrigen cor
 
 El resultado es que la señal no tiene la misma amplitud que su señal imagen, como se puede ver en la siguiente imagen.
 
-![](RackMultipart20210529-4-18qjmkn_html_733bf9047be37876.png)
+![](img/img16.png)
 
 ## COMPUTACIÓN
 
