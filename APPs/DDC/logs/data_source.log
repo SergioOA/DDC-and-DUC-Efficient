@@ -1,0 +1,6 @@
+
+[000]:	Caution input interface control not connected
+
+[000]:	[info at file ../src/data_source.c, line 93]: Parameter block_length is 1024
+
+[000]:	[info at file ../src/data_source.c, line 94]: Parameter block_length 

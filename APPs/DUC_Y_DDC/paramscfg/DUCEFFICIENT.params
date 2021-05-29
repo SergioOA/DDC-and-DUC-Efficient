@@ -1,0 +1,44 @@
+parameter {
+	name = polyphaseFilterPath
+	value = paramscfg/128-9400Hz.coeff
+}
+
+parameter {
+	name = polyphaseFilterSize
+	value = 128
+}
+
+parameter {
+	name = polyphaseFilterPartitions
+	value = 4
+}
+
+parameter {
+	name = polyphaseFilterFirstCoeffI
+	value = 0
+}
+
+parameter {
+	name = polyphaseFilterFirstCoeffQ
+	value = 2
+}
+
+parameter {
+	name = interpolationFactor
+	value = 2
+}
+
+parameter {
+	name = delmationFactor
+	value = 1
+}
+
+parameter {
+	name = highPassFilterPath
+	value = paramscfg/HPF_10KHz.coeff
+}
+
+parameter {
+	name = highPassFilterSize
+	value = 61
+}

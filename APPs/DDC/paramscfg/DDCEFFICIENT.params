@@ -1,0 +1,34 @@
+parameter {
+	name = polyphaseFilterPath
+	value = paramscfg/LPF_64coeff_6600Hz.coeff
+}
+
+parameter {
+	name = polyphaseFilterSize
+	value = 64
+}
+
+parameter {
+	name = polyphaseFilterPartitions
+	value = 4
+}
+
+parameter {
+	name = polyphaseFilterFirstCoeffI
+	value = 2
+}
+
+parameter {
+	name = polyphaseFilterFirstCoeffQ
+	value = 0
+}
+
+parameter {
+	name = interpolationFactor
+	value = 1
+}
+
+parameter {
+	name = delmationFactor
+	value = 1
+}

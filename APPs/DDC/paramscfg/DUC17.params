@@ -1,0 +1,50 @@
+#------------------------------------------------------------------
+# opMODE;
+#define BYPASS			2
+#define NORMAL			3
+parameter {
+	name = opMODE
+	value = 3
+}
+#------------------------------------------------------------------
+# fo_freqHz: Carrier frequency
+parameter {
+	name = f0_freqHz
+	value = 12000.0
+}
+#------------------------------------------------------------------
+# gain: Output gain
+parameter {
+	name = gain
+	value = 100.0
+}
+#------------------------------------------------------------------
+# Ninterpol: Interpolation Number. Add N-1 zeros.
+parameter {
+	name = Ninterpol
+	value = 1
+}
+#------------------------------------------------------------------
+# Ndecimate: Decimation Number. Eliminate samples
+parameter {
+	name = Ndecimate
+	value = 1
+}
+#------------------------------------------------------------------
+# samplingfreqHz: A value in Hz. Use 1.0 when refers to samples
+parameter {
+	name = samplingfreqHz
+	value = 48000.0
+}
+#------------------------------------------------------------------
+# Name of selected filter coeficients file:  LOW_PASS_242Hz_50dBs620HzR0001dBsREAL.coeff
+parameter {
+	name = filtercoefffile
+	value = paramscfg/LPF_3400Hz.coeff
+}
+#------------------------------------------------------------------
+
+
+
+
+

@@ -1,0 +1,48 @@
+# Do not include those parameters non used in normal execution mode
+
+#parameter {
+#	name = run_times
+#	value = 1
+#}
+
+parameter {
+	name = block_length
+	value = 1024
+}
+
+parameter {
+	name = signaltype
+	value = TONE_COMPLEX
+}
+
+#parameter {
+#	name = plot_modeIN
+#	value = C1WLS
+#}
+
+#parameter {
+#	name = plot_modeOUT
+#	value = C2WLS
+#}
+
+parameter {
+	name = samplingfreqHz
+	value = 48000.0
+}
+
+parameter {
+	name = gain
+	value = 1.0
+}
+
+parameter {
+	name = reffreq
+	value = 10.0
+}
+
+parameter {
+	name = tonefreq
+	value = 5000.0
+}
+
+

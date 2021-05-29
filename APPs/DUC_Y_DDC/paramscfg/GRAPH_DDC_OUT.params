@@ -1,0 +1,132 @@
+#####################################################################################################
+# GRAPH module can perform several tasks
+#1- Capture data and save in a txt file. 
+#	File name is allocated in APPname/reports/GRAPH_name in .app file.
+#2- Read data file to be used as input for the next module in the chain. 
+#	The file must be allocated in APP_name/reports/ folder.
+#3- Bypass data. Allows to send received data to the next module in the chain.
+#4- Plot received data in several formats:
+#  	plot_mode: selects the plot type: time, frequency or constellation. You can combine all three.
+# 	Configuration Parameters explained below
+#####################################################################################################
+# CAPTURE DATA ------------------------------------------------------------------
+# 0: No Capture, 1: Text Data Files, 2: Bin Data Files (Not yet)
+parameter {
+	name = captureDATA
+	value = 0
+}
+# Number of time slots to capture
+parameter {
+	name = TS2capture
+	value = 10000
+}
+# File to be written:
+# a) NULL : the written file will be "reports/GRAPH_MODULE_NAME"
+# b) FILE_NAME : the written file will "be reports/FILE_NAME"
+parameter {
+	name = output_FILE
+	value = FILE_NAME
+}
+# READ DATA FILE----------------------------------------------------------------
+# Activate reading file: 0 No read; >0: Indicates Read file length each Tslot
+parameter {
+	name = readfilelength
+	value = 0
+}
+# File to be read (): SIMULDATACHANNEL20dBs
+parameter {
+	name = input_FILE
+	value = OriginalSignalNOi.csv
+}
+#------------------------------------------------------------------------------
+# bypass; 0: No Bypass data, 1: Bypass data
+parameter {
+	name = bypass
+	value = 1
+}
+# inputtype: "COMPLEXFLOAT", "FLOAT", "INT", "CHAR"
+parameter {
+	name = inputtype
+	value = COMPLEXFLOAT
+}
+# outputtype: "COMPLEXFLOAT", "FLOAT", "INT", "CHAR"
+parameter {
+	name = outputtype
+	value = COMPLEXFLOAT
+}
+# PLOT CONFIGURATION ------------------------------------------------------------
+# PLOT_MODE
+#	 	0x0: None;						
+#		0x1: Time;
+#		0x2: Spectrum;
+#		0x4: Constellation
+#		0x7: Alltogether
+
+parameter {
+	name = plot_mode
+	value = 2
+}
+# TIME PLOT ----------------
+# numsampl2view: Data is not plot until numsampl2view has been received
+parameter {
+	name = numsampl2view
+	value = 2048
+}
+
+# plot_periodTS: Defines the number of Time slot to skip before to plot again
+# Use 1 for executing step by step.
+# Use a big enough number to avoid to stress the equipment due to plotting
+parameter {
+	name = plot_periodTS
+	value = 1
+}
+# FREQUENCY PLOT ----------------
+# LOGSCALE: dB Scale for FFT plotting: 0=Linear Scale; 1=dB Scale
+parameter {
+	name = logscale
+	value = 1
+}
+
+# samplingfreqHz: A value in Hz. Use 1.0 when refers to samples
+parameter {
+	name = samplingfreqHz
+	value = 24000.0
+}
+# fo_carrier: Define the central frequency of captured data
+parameter {
+	name = fo_carrier
+	value = 0.0
+}
+parameter {
+	name = fftsize
+	value = 2048
+}
+
+# AVERAGED FFT: 0=Non Averaged; 1: Averaged
+parameter {
+	name = averagefft
+	value = 0
+}
+
+# Persistence of history in average
+parameter {
+	name = mu
+	value = 0.1
+}
+#------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
